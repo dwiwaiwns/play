@@ -1,7 +1,6 @@
 ---
 title: 'ABOUT'
 date: 2018-04-18 16:45:24
-tags: resume
 ---
 # 张鹏/Peng Zhang
 ## Java工程师

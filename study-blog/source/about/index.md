@@ -1,7 +1,6 @@
 ---
 title: 'ABOUT'
 date: 2018-04-17 16:45:24
-tags:
 ---
 ### ![tags](../about/tags.png) 关于我
 &nbsp;&nbsp;&nbsp;![star](star.png)&nbsp;Java后端工程师<br/>

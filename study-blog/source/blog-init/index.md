@@ -13,3 +13,7 @@ https://github.com/Ben02/hexo-theme-Anatole/wiki
 
 ### Second
 4 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：
+
+
+好友：
+http://yefan95.github.io

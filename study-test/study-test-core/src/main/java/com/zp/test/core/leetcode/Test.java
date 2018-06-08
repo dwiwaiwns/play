@@ -27,8 +27,8 @@ public class Test {
     public static void main(String[] args) {
         // int a = (1 + 3) / 2;
         // System.out.println(a);
-        // System.out.println(new Test().findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
-        // System.out.println(new Test().findMedianSortedArrays(new int[]{}, new int[]{1, 2, 3, 4, 5}));
+        // System.out.println(new SynchronizedTest().findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
+        // System.out.println(new SynchronizedTest().findMedianSortedArrays(new int[]{}, new int[]{1, 2, 3, 4, 5}));
         System.out.println(new Test().longestPalindrome("babad"));
         System.out.println(new Test().longestPalindrome("cbbd"));
         System.out.println(new Test().longestPalindrome("ccc"));

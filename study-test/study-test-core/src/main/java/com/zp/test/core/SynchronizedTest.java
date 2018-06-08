@@ -1,13 +1,13 @@
-package com.zp.excel.test;
+package com.zp.test.core;
 
 import java.util.Random;
 
 /**
  * Author:Zhang Peng
  * Date:2017/4/20 0020
- * Description:Test
+ * Description:SynchronizedTest
  */
-public class Test {
+public class SynchronizedTest {
     private static int data = 0;
     private static Random random = new Random();
     private static String sync = "";

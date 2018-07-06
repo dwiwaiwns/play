@@ -129,7 +129,74 @@ public class Test {
         // System.out.println(test.canConstruct("a", "b"));
         // System.out.println(test.canConstruct("aa", "ab"));
         // System.out.println(test.canConstruct("aa", "aab"));
-        System.out.println(test.canConstruct("fffbfg", "effjfggbffjdgbjjhhdegh"));
+        // System.out.println(test.canConstruct("fffbfg", "effjfggbffjdgbjjhhdegh"));
+
+        // 387. First Unique Character in a String
+        // System.out.println(test.firstUniqChar("aadadaad"));
+        // System.out.println(test.firstUniqChar("leetcode"));
+        // System.out.println(test.firstUniqChar("loveleetcode"));
+        // System.out.println(test.firstUniqChar("yekbsxznylrwamcaugrqrurvpqybkpfzwbqiysrdnrsnbftvrnszfjbkbmrctjizkjqoxqzddyfnavnhqeblfmzqgsjflghaulbadwqsyuetdelujphmlgtmkoaoijypvcajctbaumeromgejtewbwqptotrorephegyobbstvywljboeihdliknluqdpgampjyjpinxhhqexoctysfdciqjbzilnodzoihihusxluqoayenluziobxiodrfdkinkzzozmxfezfvllpdvogqqtquwcsijwachefspywdgsohqtlquhnoecccgbkrzqcprzmwvygqwddnehhi"));
+
+        // 434. Number of Segments in a String
+        // System.out.println(test.countSegments("Hello, my name is John"));
+        // System.out.println(test.countSegments(", , , ,        a, eaefa"));
+
+        // 443. String Compression
+        // System.out.println(test.compress(new char[]{'a', 'a', 'b', 'b', 'c', 'c', 'c'}));
+        // System.out.println(test.compress(new char[]{'a'}));
+        // System.out.println(test.compress(new char[]{'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'}));
+
+        // 459. Repeated Substring Pattern
+        // System.out.println(test.repeatedSubstringPattern("abab"));
+        // System.out.println(test.repeatedSubstringPattern("aba"));
+        // System.out.println(test.repeatedSubstringPattern("abcabcabcabc"));
+
+        // 520. Detect Capital
+        // System.out.println(test.detectCapitalUse("A"));
+        // System.out.println(test.detectCapitalUse("USA"));
+        // System.out.println(test.detectCapitalUse("FlaG"));
+
+        // 521. Longest Uncommon Subsequence I
+        // System.out.println(test.findLUSlength("", "cdc"));
+
+        // 541. Reverse String II
+        // System.out.println(test.reverseStr("abcdefg", 2));
+        // System.out.println(test.reverseStr("hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdfehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjqlimjkfnqcqnajmebeddqsgl", 39));// input
+
+        // 551. Student Attendance Record I
+        // System.out.println(test.checkRecord("PPALLP"));
+        // System.out.println(test.checkRecord("PPALLL"));
+
+        // 557. Reverse Words in a String III
+        // System.out.println(test.reverseWords("Let's take  LeetCode contest "));
+
+        // 606. Construct String from Binary Tree
+        // TODO Can be optimized
+        // TreeNode606 treeNode606_1_4 = new TreeNode606(4);
+        // TreeNode606 treeNode606_1_3 = new TreeNode606(3);
+        // TreeNode606 treeNode606_1_2 = new TreeNode606(2);
+        // treeNode606_1_2.left = treeNode606_1_4;
+        // TreeNode606 treeNode606_1_1 = new TreeNode606(1);
+        // treeNode606_1_1.left = treeNode606_1_2;
+        // treeNode606_1_1.right = treeNode606_1_3;
+        // System.out.println(test.tree2str(treeNode606_1_1));
+        //
+        // TreeNode606 treeNode606_2_4 = new TreeNode606(4);
+        // TreeNode606 treeNode606_2_3 = new TreeNode606(3);
+        // TreeNode606 treeNode606_2_2 = new TreeNode606(2);
+        // treeNode606_2_2.right = treeNode606_2_4;
+        // TreeNode606 treeNode606_2_1 = new TreeNode606(1);
+        // treeNode606_2_1.left = treeNode606_2_2;
+        // treeNode606_2_1.right = treeNode606_2_3;
+        // System.out.println(test.tree2str(treeNode606_2_1));
+
+        // 657. Judge Route Circle
+        // System.out.println(test.judgeCircle("UD"));
+        // System.out.println(test.judgeCircle("LL"));
+
+        // 680. Valid Palindrome II
+        // System.out.println(test.validPalindrome("abcdefghijklmn"));
+        System.out.println(test.validPalindrome("atbbga"));
 
         System.out.println("finished!");
     }
@@ -169,6 +236,292 @@ public class Test {
         }
 
         return result;
+    }
+
+    public boolean validPalindrome(String s) {
+        s = s.toUpperCase();
+        char[] chars = s.toCharArray();
+        for (int k = 0; k < s.length(); k++) {
+            int head = 0, tail = s.length() - 1;
+            char cHead, cTail;
+            while (head < tail) {
+                cHead = s.charAt(head);
+                cTail = s.charAt(tail);
+                if (cHead == cTail) {
+                    head++;
+                    tail--;
+                } else {
+                    return isPalindromeV2(s.substring(head, tail)) || isPalindromeV2(s.substring(head + 1, tail + 1));
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isPalindromeV2(String s) {
+        if (s.isEmpty()) return true;
+        int head = 0, tail = s.length() - 1;
+        char cHead, cTail;
+        while (head < tail) {
+            cHead = s.charAt(head);
+            cTail = s.charAt(tail);
+            if (cHead != cTail)
+                return false;
+            head++;
+            tail--;
+        }
+        return true;
+    }
+
+    public boolean judgeCircle(String moves) {
+        if (moves == null || moves.isEmpty()) {
+            return true;
+        }
+        moves = moves.toUpperCase();
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < moves.length(); i++) {
+            char ch = moves.charAt(i);
+            if (ch == 'U') {
+                y++;
+            } else if (ch == 'D') {
+                y--;
+            } else if (ch == 'L') {
+                x--;
+            } else if (ch == 'R') {
+                x++;
+            }
+        }
+        if (x == 0 && y == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public String tree2str(TreeNode606 t) {
+        if (t == null) {
+            return "";
+        }
+        if (t.left == null && t.right == null) {
+            return t.val + "";
+        }
+        if (t.right == null) {
+            return t.val + "(" + tree2str(t.left) + ")";
+        }
+        return t.val + "(" + tree2str(t.left) + ")" + "(" + tree2str(t.right) + ")";
+    }
+
+    public String reverseWords(String s) {
+        int spaceIndex = s.indexOf(" ");
+        String result = "";
+        while (spaceIndex > -1 || s.length() > 0) {
+            String substring = null;
+            if (spaceIndex != -1) {
+                substring = s.substring(0, spaceIndex);
+                s = s.substring(spaceIndex + 1);
+                spaceIndex = s.indexOf(" ");
+            } else {
+                substring = s;
+                s = "";
+                spaceIndex = -1;
+            }
+            if (substring.isEmpty()) {
+                continue;
+            }
+            char[] chars = substring.toCharArray();
+            int i = 0;
+            int j = chars.length - 1;
+            for (; i < j; i++, j--) {
+                char tmp = chars[i];
+                chars[i] = chars[j];
+                chars[j] = tmp;
+            }
+            if (!result.isEmpty()) {
+                result += " ";
+            }
+            result += new String(chars);
+            System.out.println(substring);
+        }
+        return result;
+    }
+
+    public boolean checkRecord(String s) {
+        if (s == null || s.isEmpty()) {
+            return true;
+        }
+        int aCounts = 0;
+        int lCounts = 0;
+        s = s.toUpperCase();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if ('A' == ch) {
+                aCounts++;
+            } else if ('L' == ch) {
+                int tmp = 1;
+                for (int j = i + 1; j < s.length(); j++) {
+                    char ch1 = s.charAt(j);
+                    if ('L' == ch1) {
+                        tmp++;
+                    } else {
+                        i = j - 1;
+                        break;
+                    }
+                }
+                lCounts = Math.max(lCounts, tmp);
+            }
+            if (aCounts > 1 || lCounts > 2) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String reverseStr(String s, int k) {
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+        int step = k;
+        if (k > s.length()) {
+            step = s.length();
+        }
+        char[] chars = s.toCharArray();
+        int i = 0;
+        int j = step - 1;
+        int times = 0;
+        while (i < s.length()) {
+            times++;
+            if (j > s.length()) {
+                j = s.length() - 1;
+            }
+            if (times % 2 != 0) {
+                for (; i < j; i++, j--) {
+                    char tmp = chars[i];
+                    chars[i] = chars[j];
+                    chars[j] = tmp;
+                }
+            }
+            i = times * step;
+            j = i + step - 1;
+        }
+        return new String(chars);
+    }
+
+    public int findLUSlength(String a, String b) {
+        if (a.length() > b.length()) {
+            return a.length();
+        }
+        if (b.length() > a.length()) {
+            return b.length();
+        }
+        int length = -1;
+        String shortStr = a;
+        String longStr = b;
+        int tmpLength = -1;
+        for (int i = 0; i < shortStr.length(); i++) {
+            for (int j = i + 1; j <= shortStr.length(); j++) {
+                String substring = shortStr.substring(i, j);
+                if (longStr.indexOf(substring) > -1) {
+                    continue;
+                }
+                tmpLength = substring.length();
+            }
+            length = Math.max(length, tmpLength);
+            tmpLength = -1;
+        }
+        return length;
+    }
+
+    public boolean detectCapitalUse(String word) {
+        if (word == null) {
+            return false;
+        }
+        boolean allCapital = true;
+        boolean allNonCapital = true;
+        boolean onlyFirstCapital = true;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if ('a' <= ch && ch <= 'z') {
+                allCapital = false;
+                continue;
+            }
+            if ('A' <= ch && ch <= 'Z') {
+                allNonCapital = false;
+                if (i > 0) {
+                    onlyFirstCapital = false;
+                }
+                continue;
+            }
+        }
+        return allCapital || allNonCapital || onlyFirstCapital;
+    }
+
+    public boolean repeatedSubstringPattern(String s) {
+        System.out.println((s + s).substring(1, 2 * s.length() - 1));
+        return ((s + s).substring(1, 2 * s.length() - 1).contains(s)) ? true : false;
+    }
+
+    public int compress(char[] chars) {
+        int length = 0;
+        for (int i = 0; i < chars.length; i++) {
+            char ch = chars[i];
+            int count = 1;
+            while (true) {
+                if (i < chars.length - 1 && chars[i + 1] == chars[i]) {
+                    i++;
+                    count++;
+                    continue;
+                }
+                break;
+            }
+            chars[length++] = ch;
+            if (count <= 1) {
+                continue;
+            }
+            String countStr = count + "";
+            char[] countChars = countStr.toCharArray();
+            for (int j = 0; j < countChars.length; j++) {
+                chars[length++] = countChars[j];
+            }
+        }
+        return length;
+    }
+
+    public int countSegments(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+        String[] split = s.split(" ");
+        int result = split.length;
+        for (int i = 0; i < split.length; i++) {
+            if (split[i].isEmpty()) {
+                result--;
+            }
+        }
+        return result;
+    }
+
+    public int firstUniqChar(String s) {
+        if (s == null || s.isEmpty()) {
+            return -1;
+        }
+        int[] charCounts = new int[26];
+        int[] firstCharPos = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            int ch = s.charAt(i) - 'a';
+            if (charCounts[ch] == 0)
+                firstCharPos[ch] = i + 1;
+            charCounts[ch]++;
+        }
+
+        int firstUnique = Integer.MAX_VALUE;
+        for (int i = 0; i < 26; i++) {
+            if (charCounts[i] == 1)
+                firstUnique = Math.min(firstCharPos[i], firstUnique);
+        }
+
+        return firstUnique == Integer.MAX_VALUE ? -1 : firstUnique - 1;
     }
 
     public boolean canConstruct(String ransomNote, String magazine) {
@@ -610,6 +963,16 @@ public class Test {
         return false;
     }
 
+}
+
+class TreeNode606 {
+    int val;
+    TreeNode606 left;
+    TreeNode606 right;
+
+    TreeNode606(int x) {
+        val = x;
+    }
 }
 
 class ListNode {

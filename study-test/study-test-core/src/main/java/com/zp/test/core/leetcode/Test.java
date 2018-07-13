@@ -196,9 +196,23 @@ public class Test {
 
         // 680. Valid Palindrome II
         // System.out.println(test.validPalindrome("abcdefghijklmn"));
-        System.out.println(test.validPalindrome("atbbga"));
+        // System.out.println(test.validPalindrome("atbbga"));
+
+        // 686. Repeated String Match
+        // System.out.println(test.repeatedStringMatch("ab", "abababab"));
+
+        // 696. Count Binary Substrings
+        // System.out.println(test.countBinarySubstrings("10101"));
+        // System.out.println(test.countBinarySubstrings("00110011"));
+
+        // 788. Rotated Digits
+        System.out.println(test.rotatedDigits(0));
 
         System.out.println("finished!");
+    }
+
+    public int rotatedDigits(int N) {
+        return 0;
     }
 
     public static int romanToInt(String s) {
@@ -236,6 +250,38 @@ public class Test {
         }
 
         return result;
+    }
+
+    public int countBinarySubstrings(String s) {
+        int prevRunLength = 0;
+        int curRunLength = 1;
+        int res = 0;
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == s.charAt(i - 1))
+                curRunLength++;
+            else {
+                prevRunLength = curRunLength;
+                curRunLength = 1;
+            }
+            if (prevRunLength >= curRunLength)
+                res++;
+        }
+        return res;
+    }
+
+    public int repeatedStringMatch(String A, String B) {
+        if (A.length() < 1 && B.length() < 1) {
+            return -1;
+        }
+        int maxLoop = B.length() / A.length() + 1;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <= maxLoop; i++) {
+            sb.append(A);
+            if (sb.toString().contains(B)) {
+                return i + 1;
+            }
+        }
+        return -1;
     }
 
     public boolean validPalindrome(String s) {

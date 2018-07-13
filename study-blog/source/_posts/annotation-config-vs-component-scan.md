@@ -1,5 +1,5 @@
 ---
-title: <context:annotation-config> VS <context:component-scan>
+title: annotation-config VS component-scan
 date: 2018-06-08 15:38:00
 tags: [Spring]
 ---

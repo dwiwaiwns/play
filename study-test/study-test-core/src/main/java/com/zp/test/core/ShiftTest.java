@@ -7,13 +7,19 @@ package com.zp.test.core;
  */
 public class ShiftTest {
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         System.out.println(-1 << 1);
         // char c = (char) -1;
         // System.out.println(c);
     }
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
+        char c2=(char)-1;
+        c2>>=17;
+        System.out.println(Integer.toBinaryString(c2));
+    }
+
+    public static void main2(String[] args) {
         // int i = -1;
         // System.out.println(Integer.toBinaryString(i));
         // i >>>= 10;

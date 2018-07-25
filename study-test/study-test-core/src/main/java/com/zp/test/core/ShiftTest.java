@@ -8,17 +8,24 @@ package com.zp.test.core;
 public class ShiftTest {
 
     public static void main(String[] args) {
-        int big = 1234567890;
-        System.out.println(Integer.toBinaryString(1234567890));
+        ShiftTest.main2();
+    }
+
+    public static void main4() {
+        int big = 12345;
+        System.out.println(Integer.toBinaryString(12345));
         float approx = big;
+        System.out.println(approx);
+        System.out.println((int)approx);
+        System.out.println(Integer.toBinaryString((int)approx));
         System.out.println(big - (int)approx);
     }
 
-    public static void main3(String[] args) {
+    public static void main3() {
         System.out.println((int)(char)(byte) -1);
     }
 
-    public static void main2(String[] args) {
+    public static void main2() {
         int i = -1;
         char c = (char) i;
         System.out.println(String.format("%-15s:%s", "c's binary str", Integer.toBinaryString(c)));
@@ -43,7 +50,7 @@ public class ShiftTest {
         System.out.println(String.format("%-15s:%s", "c4 >>>= 33", Integer.toBinaryString(c4)));
     }
 
-    public static void main1(String[] args) {
+    public static void main1() {
         // int i = -1;
         // System.out.println(Integer.toBinaryString(i));
         // i >>>= 10;

@@ -38,8 +38,7 @@ int -1的补码：1111 1111 1111 1111 1111 1111 1111 1111
 在将一个整数类型转换成另一个宽度更宽的整数类型时，通常是可以保持其数值的，
 但是却不可能将一个负的 byte 数值表示成一个 char 。
 因此，从 byte 到 char 的转换被认为不是一个拓宽原始类型的转换，
-而是一个拓宽并窄化原始类型的转换（widening and narrowing primitive conversion）：byte被转换成了int，而这个int再被转换成了char。
-详细请参考 https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html
+而是一个拓宽并窄化原始类型的转换（[widening and narrowing primitive conversion](https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html)）：byte被转换成了int，而这个int再被转换成了char。
 
 于是回到文章开头提到的规则，这个规则原话内容应该是出自《Java解惑》，按照规则，变换之后：
  ```
@@ -51,14 +50,3 @@ int -1的补码：1111 1111 1111 1111 1111 1111 1111 1111
  补码：0000 0000 0000 0000 1111 1111 1111 1111
  ```
  所以最终结果为：65535
- 
- 
- 
-0100 1001 1001 0110 0000 0010 1101 0010
-
-10010011
-00101100000001011010010
-
-147
-
-1442514

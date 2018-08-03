@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zp.web.mapper.RoleMapper">
-    <resultMap id="BaseResultMap" type="com.zp.web.po.Role">
+<mapper namespace="com.pzhang7.study.web.shiro.test.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.pzhang7.study.web.shiro.test.po.Role">
         <id column="ID" property="id" jdbcType="BIGINT"/>
         <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR"/>
     </resultMap>
@@ -18,11 +18,11 @@
     delete from t_role
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.zp.web.po.Role">
+    <insert id="insert" parameterType="com.pzhang7.study.web.shiro.test.po.Role">
     insert into t_role (ID, ROLE_NAME)
     values (#{id,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.zp.web.po.Role">
+    <insert id="insertSelective" parameterType="com.pzhang7.study.web.shiro.test.po.Role">
         insert into t_role
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -41,7 +41,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.zp.web.po.Role">
+    <update id="updateByPrimaryKeySelective" parameterType="com.pzhang7.study.web.shiro.test.po.Role">
         update t_role
         <set>
             <if test="roleName != null">
@@ -50,7 +50,7 @@
         </set>
         where ID = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.zp.web.po.Role">
+    <update id="updateByPrimaryKey" parameterType="com.pzhang7.study.web.shiro.test.po.Role">
     update t_role
     set ROLE_NAME = #{roleName,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=BIGINT}

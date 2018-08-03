@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="serviceA" class="com.zp.test.mockito.core.service.ServiceA"/>
-    <bean id="serviceB" class="com.zp.test.mockito.core.service.ServiceB"/>
-    <bean id="serviceC" class="com.zp.test.mockito.core.service.ServiceC"/>
+    <bean id="serviceA" class="com.pzhang7.study.test.mockito.service.ServiceA"/>
+    <bean id="serviceB" class="com.pzhang7.study.test.mockito.service.ServiceB"/>
+    <bean id="serviceC" class="com.pzhang7.study.test.mockito.service.ServiceC"/>
 
 </beans>

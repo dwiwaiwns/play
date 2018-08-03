@@ -15,6 +15,8 @@
 
     <modules>
         <module>study-java-thread</module>
+        <module>study-java-designpattern</module>
+        <module>study-java-jvm</module>
     </modules>
 
 </project>

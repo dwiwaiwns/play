@@ -3,7 +3,7 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="testService" class="com.pengzhangg.spring.source.core.TestService">
+    <bean id="testService" class="com.pzhang7.study.spring.source.TestService">
         <property name="myList">
             <list>
                 <value>aaa</value>

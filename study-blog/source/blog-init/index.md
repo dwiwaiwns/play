@@ -20,7 +20,11 @@ http://theme-next.iissnan.com/getting-started.html
 ### 使用 local search
 具体步骤参考next主题 local search 部分
 
-好友：
+# 流程图插件
+https://github.com/bubkoo/hexo-filter-flowchart
+
+
+# 好友：
 http://yefan95.github.io
 
 https://blog.csdn.net/wk1134314305/article/details/74891419

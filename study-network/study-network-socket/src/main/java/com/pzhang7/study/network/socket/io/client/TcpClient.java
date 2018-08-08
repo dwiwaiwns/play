@@ -1,4 +1,4 @@
-package com.pzhang7.study.network.socket.client;
+package com.pzhang7.study.network.socket.io.client;
 
 import java.io.*;
 import java.net.Socket;

@@ -1,4 +1,4 @@
-package com.pzhang7.study.network.socket.server;
+package com.pzhang7.study.network.socket.io.server;
 
 import java.io.IOException;
 import java.io.InputStream;

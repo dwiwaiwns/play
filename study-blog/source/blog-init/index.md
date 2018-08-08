@@ -23,6 +23,9 @@ http://theme-next.iissnan.com/getting-started.html
 # 流程图插件
 https://github.com/bubkoo/hexo-filter-flowchart
 
+# 置顶插件
+https://blog.csdn.net/qwerty200696/article/details/79010629
+
 
 # 好友：
 http://yefan95.github.io

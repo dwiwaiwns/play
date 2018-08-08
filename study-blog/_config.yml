@@ -85,7 +85,7 @@ archive_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:wcnigi/wcnigi.github.io.git
+  repository: git@github.com:dwiwaiwns/dwiwaiwns.github.io.git
   branch: master
 
 search:

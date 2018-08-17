@@ -6,7 +6,6 @@
         <artifactId>study-java</artifactId>
         <groupId>com.zp.study</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../study-java/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

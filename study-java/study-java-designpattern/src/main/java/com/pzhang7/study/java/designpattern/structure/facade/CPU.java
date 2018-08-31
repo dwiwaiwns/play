@@ -1,7 +1,7 @@
 package com.pzhang7.study.java.designpattern.structure.facade;
 
 /**
- * Created by Zhang Peng on 2016/8/1.
+ * description: 其中一个子系统
  */
 public class CPU {
     public void startup() {

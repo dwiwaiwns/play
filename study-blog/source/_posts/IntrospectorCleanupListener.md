@@ -1,8 +1,12 @@
 ---
 title: IntrospectorCleanupListener的作用
-date: 2018-06-21 11:30:00
+date: 2018-09-21 11:30:00
 tags: [Spring]
 ---
+
+一个非常重要的Listener
+
+<!-- more -->
 
 # IntrospectorCleanupListener作用
 

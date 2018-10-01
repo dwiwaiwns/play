@@ -26,6 +26,22 @@ https://github.com/bubkoo/hexo-filter-flowchart
 # 置顶插件
 https://blog.csdn.net/qwerty200696/article/details/79010629
 
+# 计数插件
+
+```shell
+npm install hexo-wordcount --save
+```
+
+主题配置文件中：
+```text
+# Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: true
+  min2read: true
+```
+
 
 # 好友：
 http://yefan95.github.io

@@ -48,7 +48,8 @@ footer:
   #since: 2015
 
   # Icon between year and copyright info.
-  icon: user
+  # icon: user
+  icon: heart
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -146,10 +147,11 @@ social_icons:
 # Blog rolls
 links_icon: link
 links_title: Links
-links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+#links_layout: block
+links_layout: inline
+links:
+  系统间通信: https://blog.csdn.net/column/details/sys-communication.html
+  并发编程网: http://ifeve.com
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif

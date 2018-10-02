@@ -42,6 +42,59 @@ post_wordcount:
   min2read: true
 ```
 
+# RSS
+1.安装 hexo-generator-feed插件
+```sbtshell
+npm install --save hexo-generator-feed
+```
+2.编辑站点配置文件
+```text
+feed: # RSS订阅插件
+  type: atom
+  path: atom.xml
+  limit: 0
+
+plugins: hexo-generate-feed
+```
+3.修改主题配置文件
+```text
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss: /atom.xml
+```
+
+# 文章末尾统一添加“本文结束”标记
+
+1.在路径\themes\next\layout\_macro中新建passage-end-tag.swig文件,并添加以下内容：
+```html
+<div>
+    {% if not is_index %}
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    {% endif %}
+</div>
+```
+2.打开\themes\next\layout\_macro\post.swig文件，在这个位置添加代码：
+```html
+    {#####################}
+    {### END POST BODY ###}
+    {#####################}
+```
+要添加的代码如下：
+```html
+<div>
+  {% if not is_index %}
+    {% include 'passage-end-tag.swig' %}
+  {% endif %}
+</div>
+```
+3.然后打开主题配置文件，在末尾添加：
+```text
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
+```
+
 
 # 好友：
 http://yefan95.github.io

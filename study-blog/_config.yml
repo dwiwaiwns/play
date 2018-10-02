@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zp's blog
+title: Dwiwaiwns's blog
 subtitle:
 description: Doing whatever I want. And I won't stop.
 keywords:
@@ -13,10 +13,12 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://dwiwaiwns.github.io
 root: /
-permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
+#  lang: zh-Hans
 
 # Directory
 source_dir: source
@@ -93,3 +95,10 @@ search:
   field: post
   format: html
   limit: 10000
+
+feed: # RSS订阅插件
+  type: atom
+  path: atom.xml
+  limit: 0
+
+plugins: hexo-generate-feed

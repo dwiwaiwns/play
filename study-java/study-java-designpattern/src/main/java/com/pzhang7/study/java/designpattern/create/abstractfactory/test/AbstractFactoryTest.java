@@ -1,8 +1,8 @@
 package com.pzhang7.study.java.designpattern.create.abstractfactory.test;
 
-import com.zp.designpatern.create.abstractfactory.Provider;
-import com.zp.designpatern.create.abstractfactory.SendMailFactory;
-import com.zp.designpatern.create.abstractfactory.Sender;
+import com.pzhang7.study.java.designpattern.create.abstractfactory.Provider;
+import com.pzhang7.study.java.designpattern.create.abstractfactory.SendMailFactory;
+import com.pzhang7.study.java.designpattern.create.abstractfactory.Sender;
 
 /**
  * Created by Zhang Peng on 2016/7/25.

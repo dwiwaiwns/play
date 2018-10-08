@@ -1,7 +1,7 @@
 package com.pzhang7.study.java.designpattern.create.factory.test;
 
-import com.zp.designpatern.create.factory.Sender;
-import com.zp.designpatern.create.factory.SenderFactory;
+import com.pzhang7.study.java.designpattern.create.factory.Sender;
+import com.pzhang7.study.java.designpattern.create.factory.SenderFactory;
 
 /**
  * Created by Zhang Peng on 2016/7/25.

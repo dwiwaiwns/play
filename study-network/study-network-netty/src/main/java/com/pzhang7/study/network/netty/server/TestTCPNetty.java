@@ -41,12 +41,12 @@ public class TestTCPNetty {
         ThreadFactory threadFactory = new DefaultThreadFactory("work thread pool");
         //CPU个数
         int processorsNumber = Runtime.getRuntime().availableProcessors();
-        EventLoopGroup workLoogGroup = new NioEventLoopGroup(processorsNumber * 2, threadFactory, SelectorProvider.provider());
+        EventLoopGroup workLoopGroup = new NioEventLoopGroup(processorsNumber * 2, threadFactory, SelectorProvider.provider());
         //指定Netty的Boss线程和work线程
-        serverBootstrap.group(bossLoopGroup, workLoogGroup);
+        serverBootstrap.group(bossLoopGroup, workLoopGroup);
         //如果是以下的申明方式，说明BOSS线程和WORK线程共享一个线程池
         //（实际上一般的情况环境下，这种共享线程池的方式已经够了）
-        //serverBootstrap.group(workLoogGroup);
+        //serverBootstrap.group(workLoopGroup);
 
         //========================下面我们设置我们服务的通道类型
         //只能是实现了ServerChannel接口的“服务器”通道类

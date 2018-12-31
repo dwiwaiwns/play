@@ -3,9 +3,13 @@
 ### First
 1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
 
-2 在你的hexo目录下执行这样一句话npm install hexo-asset-image --save，这是下载安装一个可以上传本地图片的插件，来自dalao：dalao的git
+2 在你的hexo目录下执行命令：
+```sbtshell
+# 下载安装一个可以上传本地图片的插件，来自dalao：dalao的git
+npm install hexo-asset-image --save
+```
 
-3 等待一小段时间后，再运行hexo n "xxxx"来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹
+3 再运行hexo n "xxxx"来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹
 
 ### Second
-4 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：
+4 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片

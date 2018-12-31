@@ -37,13 +37,13 @@ markdown:
 ```
 ### 4.使用使用twemoji表情
 
-在markdown-it插件目录下clone twemoji
+在 "node_modules\markdown-it-emoji" 插件目录下clone twemoji (或者 "node_modules\markdown-it" 目录也可以)
 ```sbtshell
 git clone git@github.com:twitter/twemoji.git
 ```
 ### 5.配置markdown-it-emoji插件
 
-修改markdown-it-emoji的index.js，增加内容，我的文件修改后如下：
+修改 "node_modules\markdown-it-emoji" 插件目录下的index.js，增加内容，我的文件修改后如下：
 ```text
 'use strict';
 
@@ -100,7 +100,7 @@ module.exports = function emoji_plugin(md, options) {
 $('.content img')
       .not('[hidden]')
       .not('.group-picture img, .post-gallery img')
-	  .not('img.emoji') // 这一行是我新加的配置
+      .not('img.emoji') // 这一行是我新加的配置
       .each(function () {
         var $image = $(this);
         var imageTitle = $image.attr('title');

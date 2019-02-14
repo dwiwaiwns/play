@@ -15,8 +15,8 @@
         <jdk.version>1.7</jdk.version>
         <!-- framework -->
         <cxf.version>3.2.1</cxf.version>
-        <springframework.version>4.3.12.RELEASE</springframework.version>
-        <springframework.security.version>4.2.3.RELEASE</springframework.security.version>
+        <springframework.version>4.3.22.RELEASE</springframework.version>
+        <springframework.security.version>4.2.11.RELEASE</springframework.security.version>
         <spring.mock.version>2.0.8</spring.mock.version>
         <spring.test.version>4.3.12.RELEASE</spring.test.version>
         <testng.version>6.8.21</testng.version>

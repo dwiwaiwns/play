@@ -8,4 +8,4 @@ categories:
 
 # 本帖持续更新……
 
-![knowledge-stack](000009-knowledge-stack/01-knowledge-stack.png)<br/>
+![knowledge-stack](000008-knowledge-stack/01-knowledge-stack.png)<br/>

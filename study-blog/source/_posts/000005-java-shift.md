@@ -22,7 +22,7 @@ double:64bits
 ```
 
 ### 2.Java的数据类型取值范围
-![data range](java-shift/01-data-range.png)<br/>
+![data range](000005-java-shift/01-data-range.png)<br/>
 
 ### 3.移位操作
 移位操作符有左移位<<、右移位>>和无符号右移>>>，当然类似于+=这种操作符，也有<<=和>>=

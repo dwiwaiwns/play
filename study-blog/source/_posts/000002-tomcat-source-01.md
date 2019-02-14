@@ -15,12 +15,12 @@ tags: Tomcat
 此文档介绍第二种方法在IDEA中打开源码，第一种方法请参考 Apache 官方网站。
 
 ### 1.下载源码（src）以及运行文件（bin），下载地址： [apache](http://tomcat.apache.org/ "apache").
-![download](tomcat-source-01/01-download.jpg)<br/>
+![download](000002-tomcat-source-01/01-download.jpg)<br/>
 
 ### 2.配置工程
 #### 2.1. 解压文件
-![src](tomcat-source-01/01-unzip-src-file-list.jpg)<br/>
-![bin](tomcat-source-01/01-unzip-bin-file-list.jpg)<br/>
+![src](000002-tomcat-source-01/01-unzip-src-file-list.jpg)<br/>
+![bin](000002-tomcat-source-01/01-unzip-bin-file-list.jpg)<br/>
 
 #### 2.2.配置目录
 * 创建 "tomcat-9" 目录
@@ -106,7 +106,7 @@ tags: Tomcat
 ```
 
 #### 2.4.在IDEA中打开工程
-![open](tomcat-source-01/01-open-project.jpg)<br/>
+![open](000002-tomcat-source-01/01-open-project.jpg)<br/>
 
 #### 2.5.编辑 run config 参数
 ```
@@ -115,7 +115,7 @@ tags: Tomcat
 -Djava.endorsed.dirs=catalina-home/endorsed
 -Djava.io.tmpdir=catalina-home/temp
 ```
-![open](tomcat-source-01/01-run-config.jpg)<br/>
+![open](000002-tomcat-source-01/01-run-config.jpg)<br/>
 
 ### 3.运行并访问
 ```

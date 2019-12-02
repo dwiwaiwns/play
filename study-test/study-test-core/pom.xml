@@ -89,11 +89,6 @@
             <version>3.3</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.meidusa.toolkit</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.1</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
         <dependency>
             <groupId>net.sourceforge.jexcelapi</groupId>

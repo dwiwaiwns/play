@@ -20,7 +20,7 @@
         <spring.mock.version>2.0.8</spring.mock.version>
         <spring.test.version>4.3.12.RELEASE</spring.test.version>
         <testng.version>6.8.21</testng.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <modules>
